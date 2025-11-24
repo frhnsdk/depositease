@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Investment - DepositEase</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L21 21M3 21L21 3" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M7 7L17 17M7 17L17 7" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">DepositEase</span>
+            </div>
+            <div class="nav-links">
+                <a href="javascript:history.back()" class="back-link">← Back to Product</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Application Form Section -->
+    <section class="application-section">
+        <div class="container">
+            <h1 class="page-title">Apply for Investment</h1>
+            <p class="page-subtitle">Fill out the form below to submit your application for <span id="productName">...</span></p>
+
+            <div class="application-grid">
+                <!-- Application Form -->
+                <div class="application-form-card">
+                    <h2>Application Details</h2>
+                    <p class="form-intro">Please provide accurate information. Our team will verify the details before processing.</p>
+
+                    <form id="applicationForm">
+                        <div class="form-group">
+                            <label class="form-label required">Full Name</label>
+                            <input type="text" id="applicantName" class="form-input" required placeholder="Enter your full name as per NID">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label required">Phone Number</label>
+                                <input type="tel" id="applicantPhone" class="form-input" required placeholder="01XXXXXXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required">Email Address</label>
+                                <input type="email" id="applicantEmail" class="form-input" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">NID Number</label>
+                            <input type="text" id="applicantNID" class="form-input" placeholder="Enter your National ID number">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <textarea id="applicantAddress" class="form-textarea" rows="3" placeholder="Enter your full address"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Intended Deposit Amount</label>
+                            <input type="number" id="depositAmount" class="form-input" required step="1000" min="0" placeholder="Enter amount in BDT">
+                            <div class="form-help">You can specify this later during the verification process</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label required">Tenure Period</label>
+                            <input type="text" id="tenureSelected" class="form-input" required readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Additional Notes</label>
+                            <textarea id="applicationNotes" class="form-textarea" rows="3" placeholder="Any additional information or questions"></textarea>
+                        </div>
+
+                        <div class="next-steps-box">
+                            <h4>Next Steps:</h4>
+                            <ol>
+                                <li>Submit this application form</li>
+                                <li>Our team will verify your information</li>
+                                <li>You'll receive a call/email within 24-48 hours</li>
+                                <li>Complete KYC documentation</li>
+                                <li>Your investment account will be activated</li>
+                            </ol>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="history.back()">Cancel</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span id="submitBtnText">Submit Application</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Selected Product Info -->
+                <div class="selected-product-card">
+                    <h3>Selected Product</h3>
+                    
+                    <div class="selected-product-info">
+                        <p class="info-label">Bank</p>
+                        <p class="info-value" id="selectedBank">-</p>
+                    </div>
+
+                    <div class="selected-product-info">
+                        <p class="info-label">Product Type</p>
+                        <p class="info-value" id="selectedType">-</p>
+                    </div>
+
+                    <div class="selected-product-info">
+                        <p class="info-label">Interest Rate</p>
+                        <p class="info-value interest-highlight" id="selectedRate">-%</p>
+                        <p class="info-sublabel">per annum</p>
+                    </div>
+
+                    <div class="selected-product-info">
+                        <p class="info-label">Minimum Deposit</p>
+                        <p class="info-value" id="selectedMinDeposit">৳-</p>
+                    </div>
+
+                    <div class="selected-product-info">
+                        <p class="info-label">Tenure</p>
+                        <p class="info-value" id="selectedTenure">-</p>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Note:</strong> This is a preliminary application. Final terms and conditions will be provided during the verification process.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/script.js"></script>
+    <script>
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        if (productId) {
+            loadProductForApplication(productId);
+        } else {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DepositEase - Compare & Invest Smarter</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L21 21M3 21L21 3" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M7 7L17 17M7 17L17 7" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">DepositEase</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Compare & Invest Smarter</h1>
+            <p class="hero-subtitle">
+                Find the best Fixed Deposits and DPS schemes from top banks in<br>
+                Bangladesh. Compare rates, apply online, and grow your wealth.
+            </p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Secure & Trusted</span>
+                </div>
+                <div class="feature-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/>
+                        <path d="M12 7V12L15 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Quick Application</span>
+                </div>
+                <div class="feature-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 7L18 12L13 17M6 7L11 12L6 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Best Rates</span>
+                </div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-container">
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8" stroke="#9CA3AF" stroke-width="2"/>
+                        <path d="M21 21L16.65 16.65" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search by bank name..." id="searchInput">
+                </div>
+                <select class="filter-select" id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="Fixed Deposit">Fixed Deposit</option>
+                    <option value="DPS">DPS</option>
+                    <option value="Savings Account">Savings Account</option>
+                </select>
+                <select class="filter-select" id="tenureFilter">
+                    <option value="">All Tenures</option>
+                    <option value="3 months">3 Months</option>
+                    <option value="6 months">6 Months</option>
+                    <option value="12 months">1 Year</option>
+                    <option value="24 months">2 Years</option>
+                    <option value="36 months">3 Years</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Available Investment Products</h2>
+            <p class="section-subtitle" id="productCount">Loading products...</p>
+            
+            <div id="productsGrid" class="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>

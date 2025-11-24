@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - DepositEase</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L21 21M3 21L21 3" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M7 7L17 17M7 17L17 7" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">DepositEase</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Main Content -->
+                <div class="product-main">
+                    <div class="product-header">
+                        <div class="bank-icon">🏦</div>
+                        <div>
+                            <h1 class="product-bank-name" id="bankName">Loading...</h1>
+                            <p class="product-type" id="productType">...</p>
+                        </div>
+                        <button class="btn btn-primary apply-btn" onclick="goToApplication()">Apply Now</button>
+                    </div>
+
+                    <div class="interest-rate-large">
+                        <span id="interestRate">--%</span>
+                        <span class="rate-label">interest per annum</span>
+                    </div>
+
+                    <div class="detail-card">
+                        <h2>Product Overview</h2>
+                        <p id="productOverview">Loading...</p>
+                    </div>
+
+                    <div class="detail-card">
+                        <h2>🌟 Key Features</h2>
+                        <ul id="keyFeaturesList" class="features-list">
+                            <!-- Features will be loaded here -->
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h2>Withdrawal Rules</h2>
+                        <p id="withdrawalRules">Loading...</p>
+                    </div>
+
+                    <div class="detail-card">
+                        <h2>Eligibility Criteria</h2>
+                        <p id="eligibilityCriteria">Loading...</p>
+                        
+                        <h3 class="subsection-title">Required Documents:</h3>
+                        <ul id="requiredDocsList" class="docs-list">
+                            <!-- Documents will be loaded here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="product-sidebar">
+                    <div class="quick-facts-card">
+                        <h3>Quick Facts</h3>
+                        <p class="facts-subtitle">Investment details at a glance</p>
+                        
+                        <div class="fact-item">
+                            <div class="fact-icon">💰</div>
+                            <div>
+                                <p class="fact-label">Minimum Deposit</p>
+                                <p class="fact-value" id="minDeposit">৳-</p>
+                            </div>
+                        </div>
+
+                        <div class="fact-item">
+                            <div class="fact-icon">📅</div>
+                            <div>
+                                <p class="fact-label">Tenure Period</p>
+                                <p class="fact-value" id="tenure">-</p>
+                            </div>
+                        </div>
+
+                        <div class="fact-item">
+                            <div class="fact-icon">📈</div>
+                            <div>
+                                <p class="fact-label">Interest Rate</p>
+                                <p class="fact-value" id="interestRateSidebar">- p.a.</p>
+                            </div>
+                        </div>
+
+                        <div class="fact-item" id="compoundingItem" style="display: none;">
+                            <div class="fact-icon">🔄</div>
+                            <div>
+                                <p class="fact-label">Compounding</p>
+                                <p class="fact-value" id="compounding">-</p>
+                            </div>
+                        </div>
+
+                        <div class="estimated-returns">
+                            <h4>Estimated Returns</h4>
+                            <div class="return-row">
+                                <span>On ৳10,000:</span>
+                                <strong id="return10k">৳-</strong>
+                            </div>
+                            <div class="return-row">
+                                <span>On ৳50,000:</span>
+                                <strong id="return50k">৳-</strong>
+                            </div>
+                            <div class="return-row">
+                                <span>On ৳100,000:</span>
+                                <strong id="return100k">৳-</strong>
+                            </div>
+                            <p class="return-note">* Estimated maturity amount including principal</p>
+                        </div>
+
+                        <button class="btn btn-primary btn-block" onclick="goToApplication()">
+                            Apply for This Product
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/script.js"></script>
+    <script>
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        if (productId) {
+            loadProductDetails(productId);
+        } else {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
