@@ -42,7 +42,9 @@ DepositEase is a deposit management platform designed for banks and financial in
 - `Frontend/` - Static frontend files (HTML, CSS, JS)
 
 ## License
-MIT
+
+## License
+This project is proprietary. All rights reserved by the author. Unauthorized use, copying, or distribution is prohibited.
 
 ## Author
 [frhnsdk](https://github.com/frhnsdk)
