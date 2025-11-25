@@ -64,7 +64,10 @@ Below are some screenshots of DepositEase:
   <br>
   <img src="Screenshots/editBank.png" alt="Edit Bank" width="600" />
   <br>
-  <img src="Screenshots/edit_product.png" alt="Edit Product" width="600" />
+
+  <img src="Screenshots/ApplyPage.png" alt="Apply Page" width="600" />
+  <br>
+  <img src="Screenshots/viewDetails.png" alt="View Details" width="600" />
 </div>
 
 ## Author
