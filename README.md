@@ -46,5 +46,26 @@ DepositEase is a deposit management platform designed for banks and financial in
 ## License
 This project is proprietary. All rights reserved by the author. Unauthorized use, copying, or distribution is prohibited.
 
+
+## Screenshots
+
+Below are some screenshots of DepositEase:
+
+<div align="center">
+  <img src="Screenshots/Home Page.png" alt="Home Page" width="600" />
+  <br>
+  <img src="Screenshots/addBank.png" alt="Add Bank" width="600" />
+  <br>
+  <img src="Screenshots/Admin Log in.png" alt="Admin Log in" width="600" />
+  <br>
+  <img src="Screenshots/adminDashboard.png" alt="Admin Dashboard" width="600" />
+  <br>
+  <img src="Screenshots/AdminRegister.png" alt="Admin Register" width="600" />
+  <br>
+  <img src="Screenshots/editBank.png" alt="Edit Bank" width="600" />
+  <br>
+  <img src="Screenshots/edit_product.png" alt="Edit Product" width="600" />
+</div>
+
 ## Author
 [frhnsdk](https://github.com/frhnsdk)

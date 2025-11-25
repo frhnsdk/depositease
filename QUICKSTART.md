@@ -28,6 +28,7 @@ When prompted "Do you want to insert sample data? (y/n):", type **n** to start w
 ### 4. Start Backend Server
 ```powershell
 cd Z:\Depositease\backend
+Create and Activate venv
 uvicorn main:app --reload
 ```
 Backend will run on: http://localhost:8000
