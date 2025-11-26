@@ -71,4 +71,4 @@ Below are some screenshots of DepositEase:
 </div>
 
 ## Author
-[frhnsdk](https://github.com/frhnsdk)
+[frhnsdk](https://github.com/frhnsdk) & SF Zakaria
